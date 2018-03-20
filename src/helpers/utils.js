@@ -1,4 +1,9 @@
-import { MINIMUM_XKCD_INDEX, MAXIMUM_XKCD_INDEX } from "./constants";
+import {
+  MINIMUM_XKCD_INDEX,
+  MAXIMUM_XKCD_INDEX,
+  NAME,
+  TITLE
+} from "./constants";
 
 export const getRandomNumberBetween = (
   from = MINIMUM_XKCD_INDEX,
@@ -13,3 +18,6 @@ export const getNextNumber = (number, maxNumber = MAXIMUM_XKCD_INDEX) =>
 
 export const firstLetterToUpperCase = string =>
   string[0].toUpperCase() + string.substr(1);
+
+export const setDocumentTitle = (title = TITLE) =>
+  (document.title = `${NAME}: ${title}`);

@@ -1,11 +1,10 @@
 import React from "react";
 
-export const ComicItem = ({ title, transcript, img, alt }) => {
+export const ComicItem = ({ title, img, alt }) => {
   return (
-    <div>
+    <div className="center">
       <h1>{title}</h1>
-      <img className="materialboxed" src={img} alt={alt} />
-      {/* <div>{img ? <img src={img} alt={alt} /> : <p>{transcript}</p>}</div> */}
+      <img className="materialboxed comic-img center" src={img} alt={alt} />
     </div>
   );
 };

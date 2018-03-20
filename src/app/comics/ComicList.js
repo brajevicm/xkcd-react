@@ -1,7 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
+import { ComicThumbnail } from "./ComicThumbnail";
 
-export class ComicList extends Component {
-  render() {
-    return <div />;
-  }
-}
+export const ComicList = ({ comics, handleComicChange }) => {
+  const handleOpenComic = index => {
+    const comic = comics[index];
+
+    return handleComicChange(comic);
+  };
+
+  return (
+    <div className="comic-list">
+      {comics &&
+        comics.map((comic, id) => (
+          <ComicThumbnail
+            key={id}
+            {...comic}
+            id={id}
+            handleOpenComic={handleOpenComic}
+          />
+        ))}
+    </div>
+  );
+};

@@ -29,7 +29,10 @@ class ComicService {
     const fullUrl = this.getFullUrl(id);
 
     return fetch(fullUrl)
-      .then(res => res.json())
+      .then(res => {
+        if (res.status >= 400) Promise.reject(new Error("Comic not found."));
+        return res.json();
+      })
       .then(comic => {
         this.currentId = comic.num;
 

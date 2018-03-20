@@ -20,7 +20,7 @@ export const ComicButtonPrevious = ({
 
   return (
     <button
-      className="waves-effect waves-light btn"
+      className="waves-effect waves-light btn btn-color"
       onClick={handleButtonClick}
     >
       {text}
