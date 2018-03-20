@@ -7,7 +7,11 @@ import {
   MAXIMUM_XKCD_INDEX,
   MINIMUM_XKCD_INDEX
 } from "../helpers/constants";
-import { getRandomNumberBetween } from "../helpers/utils";
+import {
+  getRandomNumberBetween,
+  getNextNumber,
+  getPreviousNumber
+} from "../helpers/utils";
 
 class ComicService {
   constructor(startUrl, endUrl = "", proxyUrl = "") {
@@ -35,13 +39,13 @@ class ComicService {
   };
 
   fetchNextComic = () => {
-    const nextId = this.currentId + 1;
+    const nextId = getNextNumber(this.currentId);
 
     return this.fetchComic(nextId);
   };
 
   fetchPreviousComic = () => {
-    const previousId = this.currentId - 1;
+    const previousId = getPreviousNumber(this.currentId);
 
     return this.fetchComic(previousId);
   };
