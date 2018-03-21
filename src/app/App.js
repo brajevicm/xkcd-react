@@ -73,7 +73,7 @@ export class App extends Component {
           handleComicChange={this.handleComicChange}
           handleErrorChange={this.handleErrorChange}
         />
-        <div className="row">
+        <div className="row row-custom">
           <div className="col s3">
             <ComicList
               handleComicChange={this.handleComicChange}

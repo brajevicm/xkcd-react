@@ -14,37 +14,55 @@ export const Navbar = ({
   return (
     <nav>
       <div className="nav-wrapper bg-color">
-        <ComicButtonFirst
-          text="First"
-          handleComicChange={handleComicChange}
-          handleErrorChange={handleErrorChange}
-          handleLoadingChange={handleLoadingChange}
-        />
-        <ComicButtonPrevious
-          text="Previous"
-          handleComicChange={handleComicChange}
-          handleErrorChange={handleErrorChange}
-          handleLoadingChange={handleLoadingChange}
-        />
-        <ComicButtonRandom
-          text="Random"
-          handleComicChange={handleComicChange}
-          handleErrorChange={handleErrorChange}
-          handleLoadingChange={handleLoadingChange}
-        />
-        <ComicButtonNext
-          text="Next"
-          handleComicChange={handleComicChange}
-          handleErrorChange={handleErrorChange}
-          handleLoadingChange={handleLoadingChange}
-        />
-        <ComicButtonLast
-          text="Last"
-          handleComicChange={handleComicChange}
-          handleErrorChange={handleErrorChange}
-          handleLoadingChange={handleLoadingChange}
-        />
-        <a className="brand-logo center font">xkcd</a>
+        <ul class="left hide-on-med-and-down">
+          <li>
+            <ComicButtonFirst
+              text="First"
+              handleComicChange={handleComicChange}
+              handleErrorChange={handleErrorChange}
+              handleLoadingChange={handleLoadingChange}
+            />
+          </li>
+          <li>
+            <ComicButtonPrevious
+              text="Previous"
+              handleComicChange={handleComicChange}
+              handleErrorChange={handleErrorChange}
+              handleLoadingChange={handleLoadingChange}
+            />
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <ComicButtonNext
+              text="Next"
+              handleComicChange={handleComicChange}
+              handleErrorChange={handleErrorChange}
+              handleLoadingChange={handleLoadingChange}
+            />
+          </li>
+          <li>
+            <ComicButtonLast
+              text="Last"
+              handleComicChange={handleComicChange}
+              handleErrorChange={handleErrorChange}
+              handleLoadingChange={handleLoadingChange}
+            />
+          </li>
+        </ul>
+        {/* <a className="brand-logo center font">xkcd</a> */}
+        <ul>
+          <li>
+            <a className="brand-logo center">
+              <ComicButtonRandom
+                text="Random"
+                handleComicChange={handleComicChange}
+                handleErrorChange={handleErrorChange}
+                handleLoadingChange={handleLoadingChange}
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

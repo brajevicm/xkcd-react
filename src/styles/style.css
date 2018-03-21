@@ -6,6 +6,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+.link-nav {
+  width: 7rem;
+  text-align: center;
+}
+
 .bg-color {
   background: #96a8c8;
 }
@@ -25,22 +30,28 @@
 }
 
 .comic-list {
-  padding: 1rem;
+  padding: 0 3rem;
+  margin-top: 20px;
+  max-height: 37rem;
   overflow: auto;
-  height: 33rem;
 }
 
-.row {
+.row-custom {
+  height: 40rem;
   margin-bottom: 0 !important;
 }
 
 .comic-container {
-  overflow: auto;
-  height: 30rem;
+  height: 40rem;
 }
 
 .center {
   margin: 0 auto;
+}
+
+.comic-img {
+  max-height: 35rem;
+  overflow: auto;
 }
 
 .v-center {

@@ -19,11 +19,8 @@ export const ComicButtonFirst = ({
   };
 
   return (
-    <button
-      className="waves-effect waves-light btn btn-color"
-      onClick={handleButtonClick}
-    >
+    <a className="link-nav" onClick={handleButtonClick}>
       {text}
-    </button>
+    </a>
   );
 };
