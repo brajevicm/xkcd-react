@@ -10,7 +10,7 @@ export const ComicContainer = ({ loading, comic }) => {
     else return <ComicItem {...comic} />;
   };
 
-  return renderComic();
+  return <div>{renderComic()}</div>;
 };
 
 ComicContainer.propTypes = {

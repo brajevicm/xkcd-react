@@ -31,18 +31,14 @@
 
 .comic-list {
   padding: 0 3rem;
-  margin-top: 3rem;
-  max-height: 65vh;
+  max-height: 75vh;
   overflow: auto;
 }
 
 .row-custom {
+  margin-top: 4rem;
   height: 80vh;
   margin-bottom: 0 !important;
-}
-
-.comic-container {
-  height: 80vh;
 }
 
 .center {
