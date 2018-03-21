@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { ComicButtonRandom } from "../comics/buttons/ComicButtonRandom";
 import { ComicButtonFirst } from "../comics/buttons/ComicButtonFirst";
@@ -14,7 +15,7 @@ export const Navbar = ({
   return (
     <nav>
       <div className="nav-wrapper bg-color">
-        <ul class="left hide-on-med-and-down">
+        <ul className="left hide-on-med-and-down">
           <li>
             <ComicButtonFirst
               text="First"
@@ -32,7 +33,7 @@ export const Navbar = ({
             />
           </li>
         </ul>
-        <ul class="right hide-on-med-and-down">
+        <ul className="right hide-on-med-and-down">
           <li>
             <ComicButtonNext
               text="Next"
@@ -50,20 +51,23 @@ export const Navbar = ({
             />
           </li>
         </ul>
-        {/* <a className="brand-logo center font">xkcd</a> */}
         <ul>
-          <li>
-            <a className="brand-logo center">
-              <ComicButtonRandom
-                text="Random"
-                handleComicChange={handleComicChange}
-                handleErrorChange={handleErrorChange}
-                handleLoadingChange={handleLoadingChange}
-              />
-            </a>
+          <li className="brand-logo center">
+            <ComicButtonRandom
+              text="Random"
+              handleComicChange={handleComicChange}
+              handleErrorChange={handleErrorChange}
+              handleLoadingChange={handleLoadingChange}
+            />
           </li>
         </ul>
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  handleComicChange: PropTypes.func.isRequired,
+  handleErrorChange: PropTypes.func.isRequired,
+  handleLoadingChange: PropTypes.func.isRequired
 };

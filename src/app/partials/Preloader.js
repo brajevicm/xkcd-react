@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Preloader = props => (
+export const Preloader = () => (
   <div className="row v-center">
     <div className="col s1 offset-s5">
       <div className="preloader-wrapper big active">

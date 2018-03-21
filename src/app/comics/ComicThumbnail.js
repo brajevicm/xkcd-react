@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const ComicThumbnail = ({ handleOpenComic, title, img, alt, id }) => {
   const handleClick = () => handleOpenComic(id);
@@ -23,4 +24,12 @@ export const ComicThumbnail = ({ handleOpenComic, title, img, alt, id }) => {
       </div>
     </div>
   );
+};
+
+ComicThumbnail.propTypes = {
+  handleOpenComic: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
 };

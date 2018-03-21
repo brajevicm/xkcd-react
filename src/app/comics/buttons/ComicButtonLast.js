@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { comicService } from "../../../services/ComicService";
 
@@ -23,4 +24,11 @@ export const ComicButtonLast = ({
       {text}
     </a>
   );
+};
+
+ComicButtonLast.propTypes = {
+  handleErrorChange: PropTypes.func.isRequired,
+  handleComicChange: PropTypes.func.isRequired,
+  handleLoadingChange: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired
 };

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { ComicThumbnail } from "./ComicThumbnail";
 
 export const ComicList = ({ comics, handleComicChange }) => {
@@ -21,4 +23,9 @@ export const ComicList = ({ comics, handleComicChange }) => {
         ))}
     </div>
   );
+};
+
+ComicList.propTypes = {
+  comics: PropTypes.array.isRequired,
+  handleComicChange: PropTypes.func.isRequired
 };

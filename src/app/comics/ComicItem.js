@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const ComicItem = ({ title, img, alt }) => {
   return (
@@ -7,4 +8,16 @@ export const ComicItem = ({ title, img, alt }) => {
       <img className="materialboxed comic-img center" src={img} alt={alt} />
     </div>
   );
+};
+
+ComicItem.defaultProps = {
+  title: "",
+  img: "",
+  alt: ""
+};
+
+ComicItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
 };
